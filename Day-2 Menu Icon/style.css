@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgb(63, 175, 130);
+  z-index: -3;
+}
+
+.icon {
+    position: absolute;
+    bottom: 205px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+    z-index: -2;
+}
+
+.icon .up {
+    width: 90px;
+    height: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 0 0 rgba(0, 0, 0, 0.1);
+    animation: up-line 5s ease-in-out infinite 2s;
+}
+
+.icon .mid {
+    margin-top: 15px;
+    width: 90px;
+    height: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 0 0 rgba(0, 0, 0, 0.1);
+    animation: mid-line 5s ease-in-out infinite 2s;
+}
+
+.icon .low {margin-top: 15px;
+    width: 90px;
+    height: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 0 0 rgba(0, 0, 0, 0.1);
+    animation: low-line 5s ease-in-out infinite 2s;
+    z-index: -1;
+}
+
+@keyframes low-line {
+    0%{
+    
+    } 
+    10%{
+        transform: translateY(0);        
+    }
+    25%{
+        transform: translatey(-25px);
+    } 
+    45%{
+        transform: translatey(-25px) rotate(45deg);
+    }
+    55%{
+        transform: translatey(-25px) rotate(45deg);
+    } 
+    75%{
+        transform: translatey(-25px);
+    } 
+    90%{
+        transform: translateY(0);        
+    }
+    100%{
+        transform: translateY(0);        
+    } 
+}
+
+@keyframes up-line {
+    0%{
+
+    }
+    10%{
+        transform: translateY(0);        
+    }
+    25%{
+        transform: translatey(25px);
+    } 
+    45%{
+        transform: translatey(25px) rotate(135deg);
+    } 
+    55%{
+        transform: translatey(25px) rotate(135deg);
+    }  
+    75%{
+        transform: translatey(25px);        
+    } 
+    90%{
+        transform: translateY(0);        
+    }
+    100%{
+        transform: translateY(0);        
+    }
+}
+
+@keyframes mid-line {
+    0% {
+        opacity: 1;
+        width: 100%;
+    }
+    10% {
+        opacity: 1;
+        width: 100%;       
+    }   
+    25% {
+        opacity: 0.3;
+        width: 0%;       
+    } 
+    50% {
+        opacity: 0;   
+        width: 0%;   
+    }
+    75% {
+        opacity: 0.3;
+        width: 0%;
+    } 
+    90% {
+        opacity: 1;
+        width: 100%;       
+    }  
+    100% {
+        opacity: 1;
+        width: 100%;       
+    } 
+}
